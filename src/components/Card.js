@@ -28,7 +28,7 @@ const Card = () => {
   }
   const updateUserData = async () => {
     try {
-      axios.post("http://localhost:3000/", {
+      axios.post("https://bytive-technologies-mern-stack-d2co.onrender.com/", {
         id: editId,
         username: updateUser.username,
         email: updateUser.email,
@@ -69,7 +69,7 @@ const Card = () => {
   };
 
   useEffect(() => {
-    fetch("http://localhost:3000/")
+    fetch("https://bytive-technologies-mern-stack-d2co.onrender.com/")
       .then((response) => response.json())
       .then((data) => {
         const dataWithLiked = data.map((obj) => {
